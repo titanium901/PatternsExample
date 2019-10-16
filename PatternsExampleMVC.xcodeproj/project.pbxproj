@@ -18,10 +18,13 @@
 		CACC6198235724FD001B19D0 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC6197235724FD001B19D0 /* Cards.swift */; };
 		CACC619A23572D1F001B19D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619923572D1F001B19D0 /* DataManager.swift */; };
 		CACC619D23572FC1001B19D0 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619C23572FC1001B19D0 /* CardTableViewCell.swift */; };
+		CADD81CD2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD81CC2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift */; };
+		CADD81CF2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD81CE2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift */; };
+		CADD81D1235739BE00EB3DFD /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD81D0235739BE00EB3DFD /* CardDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CACC61742357208F001B19D0 /* PatternsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CACC61742357208F001B19D0 /* PatternsExampleMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsExampleMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACC61772357208F001B19D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CACC61792357208F001B19D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CACC617B2357208F001B19D0 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		CACC6197235724FD001B19D0 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		CACC619923572D1F001B19D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CACC619C23572FC1001B19D0 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		CADD81CC2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		CADD81CE2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		CADD81D0235739BE00EB3DFD /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,7 @@
 		CACC61752357208F001B19D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CACC61742357208F001B19D0 /* PatternsExample.app */,
+				CACC61742357208F001B19D0 /* PatternsExampleMVC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +112,8 @@
 		CACC618E2357217D001B19D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CACC617B2357208F001B19D0 /* CardsViewController.swift */,
+				CADD81CA235733B500EB3DFD /* CardsViewController */,
+				CADD81D2235739C700EB3DFD /* CardDetailViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,12 +153,38 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		CADD81CA235733B500EB3DFD /* CardsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CACC617B2357208F001B19D0 /* CardsViewController.swift */,
+				CADD81CB2357340D00EB3DFD /* Extension */,
+			);
+			path = CardsViewController;
+			sourceTree = "<group>";
+		};
+		CADD81CB2357340D00EB3DFD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CADD81CC2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift */,
+				CADD81CE2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CADD81D2235739C700EB3DFD /* CardDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CADD81D0235739BE00EB3DFD /* CardDetailViewController.swift */,
+			);
+			path = CardDetailViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CACC61732357208F001B19D0 /* PatternsExample */ = {
+		CACC61732357208F001B19D0 /* PatternsExampleMVC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CACC618823572090001B19D0 /* Build configuration list for PBXNativeTarget "PatternsExample" */;
+			buildConfigurationList = CACC618823572090001B19D0 /* Build configuration list for PBXNativeTarget "PatternsExampleMVC" */;
 			buildPhases = (
 				CACC61702357208F001B19D0 /* Sources */,
 				CACC61712357208F001B19D0 /* Frameworks */,
@@ -161,9 +194,9 @@
 			);
 			dependencies = (
 			);
-			name = PatternsExample;
+			name = PatternsExampleMVC;
 			productName = PatternsExample;
-			productReference = CACC61742357208F001B19D0 /* PatternsExample.app */;
+			productReference = CACC61742357208F001B19D0 /* PatternsExampleMVC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CACC616F2357208F001B19D0 /* Build configuration list for PBXProject "PatternsExample" */;
+			buildConfigurationList = CACC616F2357208F001B19D0 /* Build configuration list for PBXProject "PatternsExampleMVC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -194,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CACC61732357208F001B19D0 /* PatternsExample */,
+				CACC61732357208F001B19D0 /* PatternsExampleMVC */,
 			);
 		};
 /* End PBXProject section */
@@ -218,9 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACC6196235723AB001B19D0 /* NetworkManager.swift in Sources */,
+				CADD81CD2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift in Sources */,
+				CADD81D1235739BE00EB3DFD /* CardDetailViewController.swift in Sources */,
 				CACC619A23572D1F001B19D0 /* DataManager.swift in Sources */,
 				CACC617C2357208F001B19D0 /* CardsViewController.swift in Sources */,
 				CACC61782357208F001B19D0 /* AppDelegate.swift in Sources */,
+				CADD81CF2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift in Sources */,
 				CACC6198235724FD001B19D0 /* Cards.swift in Sources */,
 				CACC617A2357208F001B19D0 /* SceneDelegate.swift in Sources */,
 				CACC619123572293001B19D0 /* Card.swift in Sources */,
@@ -376,7 +412,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.IuriiPopov.PatternsExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PatternsExampleMVC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -394,7 +430,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.IuriiPopov.PatternsExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PatternsExampleMVC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -403,7 +439,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CACC616F2357208F001B19D0 /* Build configuration list for PBXProject "PatternsExample" */ = {
+		CACC616F2357208F001B19D0 /* Build configuration list for PBXProject "PatternsExampleMVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CACC618623572090001B19D0 /* Debug */,
@@ -412,7 +448,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CACC618823572090001B19D0 /* Build configuration list for PBXNativeTarget "PatternsExample" */ = {
+		CACC618823572090001B19D0 /* Build configuration list for PBXNativeTarget "PatternsExampleMVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CACC618923572090001B19D0 /* Debug */,

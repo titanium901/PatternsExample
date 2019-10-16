@@ -11,8 +11,9 @@ import UIKit
 class CardsViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private var cards: [Card] = []
+    private (set) var cards: [Card] = []
 
     
     override func viewDidLoad() {
@@ -27,9 +28,9 @@ class CardsViewController: UIViewController {
     private func getCards() {
         NetworkManager.shared.fetchData() { cards in
             self.cards = cards
-            print(cards)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.activityIndicator.stopAnimating()
             }
         }
     }
@@ -47,32 +48,5 @@ class CardsViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource
-extension CardsViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cards.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell",
-                                                 for: indexPath) as! CardTableViewCell
-        let course = cards[indexPath.row]
-        cell.configure(with: course)
-        
-        return cell
-    }
-}
 
-// MARK: - UITableViewDelegate
-extension CardsViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
 
