@@ -15,15 +15,18 @@ class CardsViewController: UIViewController {
     
     private (set) var cards: [Card] = []
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getCards()
         setupNavigationBar()
-        
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let card = cards[indexPath.row]
+        let detailVC = segue.destination as! CardDetailViewController
+        detailVC.card = card
+    }
     
     private func getCards() {
         NetworkManager.shared.fetchData() { cards in
