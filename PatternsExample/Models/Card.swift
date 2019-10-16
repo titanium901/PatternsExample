@@ -9,7 +9,6 @@
 // MARK: - Card
 struct Card: Decodable {
     private let value: String?
-    private let images: Images?
     private let image: String?
     private let code: String?
 }

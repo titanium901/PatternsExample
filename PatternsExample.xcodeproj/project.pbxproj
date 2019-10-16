@@ -14,9 +14,9 @@
 		CACC618123572090001B19D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CACC618023572090001B19D0 /* Assets.xcassets */; };
 		CACC618423572090001B19D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACC618223572090001B19D0 /* LaunchScreen.storyboard */; };
 		CACC619123572293001B19D0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619023572293001B19D0 /* Card.swift */; };
-		CACC619323572322001B19D0 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619223572322001B19D0 /* Images.swift */; };
 		CACC6196235723AB001B19D0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC6195235723AB001B19D0 /* NetworkManager.swift */; };
 		CACC6198235724FD001B19D0 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC6197235724FD001B19D0 /* Cards.swift */; };
+		CACC619A23572D1F001B19D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619923572D1F001B19D0 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		CACC618323572090001B19D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CACC618523572090001B19D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CACC619023572293001B19D0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		CACC619223572322001B19D0 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		CACC6195235723AB001B19D0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CACC6197235724FD001B19D0 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		CACC619923572D1F001B19D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,6 @@
 			children = (
 				CACC6197235724FD001B19D0 /* Cards.swift */,
 				CACC619023572293001B19D0 /* Card.swift */,
-				CACC619223572322001B19D0 /* Images.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CACC6195235723AB001B19D0 /* NetworkManager.swift */,
+				CACC619923572D1F001B19D0 /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -199,10 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACC6196235723AB001B19D0 /* NetworkManager.swift in Sources */,
+				CACC619A23572D1F001B19D0 /* DataManager.swift in Sources */,
 				CACC617C2357208F001B19D0 /* CardsViewController.swift in Sources */,
 				CACC61782357208F001B19D0 /* AppDelegate.swift in Sources */,
 				CACC6198235724FD001B19D0 /* Cards.swift in Sources */,
-				CACC619323572322001B19D0 /* Images.swift in Sources */,
 				CACC617A2357208F001B19D0 /* SceneDelegate.swift in Sources */,
 				CACC619123572293001B19D0 /* Card.swift in Sources */,
 			);
