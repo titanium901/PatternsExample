@@ -15,6 +15,8 @@
 		CACC618423572090001B19D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACC618223572090001B19D0 /* LaunchScreen.storyboard */; };
 		CACC619123572293001B19D0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619023572293001B19D0 /* Card.swift */; };
 		CACC619323572322001B19D0 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619223572322001B19D0 /* Images.swift */; };
+		CACC6196235723AB001B19D0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC6195235723AB001B19D0 /* NetworkManager.swift */; };
+		CACC6198235724FD001B19D0 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC6197235724FD001B19D0 /* Cards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CACC618523572090001B19D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CACC619023572293001B19D0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CACC619223572322001B19D0 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		CACC6195235723AB001B19D0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CACC6197235724FD001B19D0 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				CACC618F2357218D001B19D0 /* Models */,
 				CACC618B2357213D001B19D0 /* View */,
 				CACC618E2357217D001B19D0 /* Controllers */,
+				CACC619423572382001B19D0 /* Services */,
 				CACC618D2357215A001B19D0 /* Supporting Files */,
 				CACC618C23572151001B19D0 /* Resourse */,
 			);
@@ -107,10 +112,19 @@
 		CACC618F2357218D001B19D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CACC6197235724FD001B19D0 /* Cards.swift */,
 				CACC619023572293001B19D0 /* Card.swift */,
 				CACC619223572322001B19D0 /* Images.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CACC619423572382001B19D0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CACC6195235723AB001B19D0 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACC6196235723AB001B19D0 /* NetworkManager.swift in Sources */,
 				CACC617C2357208F001B19D0 /* CardsViewController.swift in Sources */,
 				CACC61782357208F001B19D0 /* AppDelegate.swift in Sources */,
+				CACC6198235724FD001B19D0 /* Cards.swift in Sources */,
 				CACC619323572322001B19D0 /* Images.swift in Sources */,
 				CACC617A2357208F001B19D0 /* SceneDelegate.swift in Sources */,
 				CACC619123572293001B19D0 /* Card.swift in Sources */,
