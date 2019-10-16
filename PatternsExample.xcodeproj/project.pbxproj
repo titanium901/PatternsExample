@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		CACC61782357208F001B19D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC61772357208F001B19D0 /* AppDelegate.swift */; };
 		CACC617A2357208F001B19D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC61792357208F001B19D0 /* SceneDelegate.swift */; };
-		CACC617C2357208F001B19D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC617B2357208F001B19D0 /* ViewController.swift */; };
+		CACC617C2357208F001B19D0 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC617B2357208F001B19D0 /* CardsViewController.swift */; };
 		CACC617F2357208F001B19D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACC617D2357208F001B19D0 /* Main.storyboard */; };
 		CACC618123572090001B19D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CACC618023572090001B19D0 /* Assets.xcassets */; };
 		CACC618423572090001B19D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACC618223572090001B19D0 /* LaunchScreen.storyboard */; };
+		CACC619123572293001B19D0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619023572293001B19D0 /* Card.swift */; };
+		CACC619323572322001B19D0 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619223572322001B19D0 /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CACC61742357208F001B19D0 /* PatternsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACC61772357208F001B19D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CACC61792357208F001B19D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CACC617B2357208F001B19D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CACC617B2357208F001B19D0 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		CACC617E2357208F001B19D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CACC618023572090001B19D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CACC618323572090001B19D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CACC618523572090001B19D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CACC619023572293001B19D0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CACC619223572322001B19D0 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,7 @@
 		CACC618E2357217D001B19D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CACC617B2357208F001B19D0 /* ViewController.swift */,
+				CACC617B2357208F001B19D0 /* CardsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -103,6 +107,8 @@
 		CACC618F2357218D001B19D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CACC619023572293001B19D0 /* Card.swift */,
+				CACC619223572322001B19D0 /* Images.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,9 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CACC617C2357208F001B19D0 /* ViewController.swift in Sources */,
+				CACC617C2357208F001B19D0 /* CardsViewController.swift in Sources */,
 				CACC61782357208F001B19D0 /* AppDelegate.swift in Sources */,
+				CACC619323572322001B19D0 /* Images.swift in Sources */,
 				CACC617A2357208F001B19D0 /* SceneDelegate.swift in Sources */,
+				CACC619123572293001B19D0 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
