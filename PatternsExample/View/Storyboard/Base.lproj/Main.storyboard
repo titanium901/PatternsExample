@@ -21,16 +21,41 @@
                                     <constraint firstAttribute="height" constant="200" id="igJ-Vs-9z1"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7TL-ht-u9t">
+                                <rect key="frame" x="0.0" y="288" width="414" height="608"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardCell" id="Mra-nA-UN9" customClass="CardTableViewCell" customModule="PatternsExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mra-nA-UN9" id="41L-VS-6ko">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="o31-RR-13F"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YB7-Ru-nkk"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7TL-ht-u9t" secondAttribute="bottom" id="2xm-IZ-TWZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N55-KT-ZdT" secondAttribute="trailing" id="6BY-bw-Dsn"/>
                             <constraint firstItem="N55-KT-ZdT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9jn-gz-bn5"/>
                             <constraint firstItem="N55-KT-ZdT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kh5-Bv-pkK"/>
+                            <constraint firstItem="7TL-ht-u9t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kjq-FT-aKY"/>
+                            <constraint firstItem="7TL-ht-u9t" firstAttribute="top" secondItem="N55-KT-ZdT" secondAttribute="bottom" id="gxC-zq-NWc"/>
+                            <constraint firstItem="7TL-ht-u9t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qZc-cB-wW6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cards" id="H6e-Ef-7ss"/>
+                    <connections>
+                        <outlet property="tableView" destination="7TL-ht-u9t" id="kq7-Px-YKq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

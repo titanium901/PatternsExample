@@ -25,7 +25,6 @@ class NetworkManager {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let cards = try decoder.decode(Cards.self, from: data)
                 completion(cards.cards)
-                print(cards)
             } catch let error {
                 print("Error serialization json", error)
             }
