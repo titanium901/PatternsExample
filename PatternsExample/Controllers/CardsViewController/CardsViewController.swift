@@ -24,7 +24,7 @@ class CardsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let card = cards[indexPath.row]
-        let detailVC = segue.destination as! CardDetailViewController
+        let detailVC = segue.destination as! CardDetailsViewController
         detailVC.card = card
     }
     

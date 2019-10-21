@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA535ADF235DB78E0005C577 /* CardDetailsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535ADE235DB78E0005C577 /* CardDetailsViewModelProtocol.swift */; };
+		CA535AE1235DB7A30005C577 /* CardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535AE0235DB7A30005C577 /* CardDetailsViewModel.swift */; };
 		CA6BF70423574945004C3F20 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6BF70323574945004C3F20 /* SpaceMono-Bold.ttf */; };
 		CACC61782357208F001B19D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC61772357208F001B19D0 /* AppDelegate.swift */; };
 		CACC617A2357208F001B19D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC61792357208F001B19D0 /* SceneDelegate.swift */; };
@@ -21,10 +23,12 @@
 		CACC619D23572FC1001B19D0 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC619C23572FC1001B19D0 /* CardTableViewCell.swift */; };
 		CADD81CD2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD81CC2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift */; };
 		CADD81CF2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD81CE2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift */; };
-		CADD81D1235739BE00EB3DFD /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD81D0235739BE00EB3DFD /* CardDetailViewController.swift */; };
+		CADD81D1235739BE00EB3DFD /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD81D0235739BE00EB3DFD /* CardDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA535ADE235DB78E0005C577 /* CardDetailsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewModelProtocol.swift; sourceTree = "<group>"; };
+		CA535AE0235DB7A30005C577 /* CardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewModel.swift; sourceTree = "<group>"; };
 		CA6BF70323574945004C3F20 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
 		CACC61742357208F001B19D0 /* PatternsExampleMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternsExampleMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACC61772357208F001B19D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +45,7 @@
 		CACC619C23572FC1001B19D0 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		CADD81CC2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		CADD81CE2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
-		CADD81D0235739BE00EB3DFD /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		CADD81D0235739BE00EB3DFD /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA535ADD235DB7520005C577 /* CardDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CADD81D0235739BE00EB3DFD /* CardDetailsViewController.swift */,
+				CA535ADE235DB78E0005C577 /* CardDetailsViewModelProtocol.swift */,
+				CA535AE0235DB7A30005C577 /* CardDetailsViewModel.swift */,
+			);
+			path = CardDetails;
+			sourceTree = "<group>";
+		};
 		CACC616B2357208F001B19D0 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +88,7 @@
 		CACC61762357208F001B19D0 /* PatternsExample */ = {
 			isa = PBXGroup;
 			children = (
+				CA535ADD235DB7520005C577 /* CardDetails */,
 				CACC618F2357218D001B19D0 /* Models */,
 				CACC618B2357213D001B19D0 /* View */,
 				CACC618E2357217D001B19D0 /* Controllers */,
@@ -177,7 +192,6 @@
 		CADD81D2235739C700EB3DFD /* CardDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CADD81D0235739BE00EB3DFD /* CardDetailViewController.swift */,
 			);
 			path = CardDetailViewController;
 			sourceTree = "<group>";
@@ -256,11 +270,13 @@
 			files = (
 				CACC6196235723AB001B19D0 /* NetworkManager.swift in Sources */,
 				CADD81CD2357343500EB3DFD /* CardsViewController+UITableViewDataSource.swift in Sources */,
-				CADD81D1235739BE00EB3DFD /* CardDetailViewController.swift in Sources */,
+				CADD81D1235739BE00EB3DFD /* CardDetailsViewController.swift in Sources */,
 				CACC619A23572D1F001B19D0 /* DataManager.swift in Sources */,
 				CACC617C2357208F001B19D0 /* CardsViewController.swift in Sources */,
 				CACC61782357208F001B19D0 /* AppDelegate.swift in Sources */,
+				CA535AE1235DB7A30005C577 /* CardDetailsViewModel.swift in Sources */,
 				CADD81CF2357348400EB3DFD /* CardsViewController+UITableViewDelegate.swift in Sources */,
+				CA535ADF235DB78E0005C577 /* CardDetailsViewModelProtocol.swift in Sources */,
 				CACC6198235724FD001B19D0 /* Cards.swift in Sources */,
 				CACC617A2357208F001B19D0 /* SceneDelegate.swift in Sources */,
 				CACC619123572293001B19D0 /* Card.swift in Sources */,

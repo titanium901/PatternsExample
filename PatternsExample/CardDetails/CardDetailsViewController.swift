@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardDetailViewController: UIViewController {
+class CardDetailsViewController: UIViewController {
 
     @IBOutlet weak var imageUrlLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
@@ -18,21 +18,30 @@ class CardDetailViewController: UIViewController {
     
     var card: Card!
     
-    private var isFavourite = false
+    private var viewModel: CardDetailsViewModelProtocol! {
+        didSet {
+            valueLabel.text = viewModel.cardName
+            codeLabel.text = viewModel.code
+            imageUrlLabel.text = viewModel.imageUrl
+            guard let imageData = viewModel.imageData else { return }
+            cardImage.image = UIImage(data: imageData)
+        }
+    }
+    
+//    private var isFavourite = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadFavouriteStatus()
+        viewModel = CardDetailsViewModel(card: card)
         setupUI()
         
 
     }
     
     @IBAction func toggleFavorite(_ sender: UIButton) {
-        isFavourite.toggle()
+        viewModel.isFavorite.toggle()
         let image = setImageForFavoriteButton()
         sender.setImage(image, for: .normal)
-        DataManager.shared.saveFavouriteStatus(for: card.value ?? "", with: isFavourite)
     }
     
     private func setupNavBar() {
@@ -40,24 +49,13 @@ class CardDetailViewController: UIViewController {
     }
     
     private func setupUI() {
-        imageUrlLabel.text = card.image
-        valueLabel.text = card.value
-        codeLabel.text = card.code
-        
-        guard let imageURL = URL(string: card.image!) else { return }
-        guard let imageData = try? Data(contentsOf: imageURL) else { return }
-        cardImage.image = UIImage(data: imageData)
-        
         let image = setImageForFavoriteButton()
         favouriteButton.setImage(image, for: .normal)
     }
     
     private func setImageForFavoriteButton() -> UIImage {
-        return isFavourite ? #imageLiteral(resourceName: "heartIcon") : #imageLiteral(resourceName: "unselectedHeart")
+        return viewModel.isFavorite ? #imageLiteral(resourceName: "heartIcon") : #imageLiteral(resourceName: "unselectedHeart")
     }
     
-    private func loadFavouriteStatus() {
-        isFavourite = DataManager.shared.loadFavouriteStatus(for: card.value ?? "")
-    }
 
 }
