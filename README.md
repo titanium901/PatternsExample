@@ -1,4 +1,4 @@
-# PatternsExampleMVC
+# PatternsExample MVC + MVVM (branch MVVM)
 
 ### MVC + http://deckofcardsapi.com/
 
