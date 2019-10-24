@@ -13,4 +13,6 @@ protocol CardsListViewModelProtocol {
     func fetchCards(completion: @escaping() -> Void)
     func numberOfRows() -> Int?
     func cellViewModel(for indexPath: IndexPath) -> CardsTableViewCellViewModelProtocol?
+    func selectedRow(for indexPath: IndexPath)
+    func viewModelForSelectedRow() -> CardDetailsViewModelProtocol?
 }

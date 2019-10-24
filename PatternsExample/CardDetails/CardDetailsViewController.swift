@@ -18,21 +18,12 @@ class CardDetailsViewController: UIViewController {
     
     var card: Card!
     
-    private var viewModel: CardDetailsViewModelProtocol! {
-        didSet {
-            valueLabel.text = viewModel.cardName
-            codeLabel.text = viewModel.code
-            imageUrlLabel.text = viewModel.imageUrl
-            guard let imageData = viewModel.imageData else { return }
-            cardImage.image = UIImage(data: imageData)
-        }
-    }
+    var viewModel: CardDetailsViewModelProtocol! 
     
 //    private var isFavourite = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CardDetailsViewModel(card: card)
         setupUI()
         
 
@@ -49,6 +40,12 @@ class CardDetailsViewController: UIViewController {
     }
     
     private func setupUI() {
+        valueLabel.text = viewModel.cardName
+        codeLabel.text = viewModel.code
+        imageUrlLabel.text = viewModel.imageUrl
+        guard let imageData = viewModel.imageData else { return }
+        cardImage.image = UIImage(data: imageData)
+        
         let image = setImageForFavoriteButton()
         favouriteButton.setImage(image, for: .normal)
     }

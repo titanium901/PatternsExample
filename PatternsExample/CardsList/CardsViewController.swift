@@ -32,9 +32,9 @@ class CardsViewController: UIViewController, UITableViewDataSource {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let card = viewModel.cards[indexPath.row]
         let detailVC = segue.destination as! CardDetailsViewController
-        detailVC.card = card
+        viewModel.selectedRow(for: indexPath)
+        detailVC.viewModel = viewModel.viewModelForSelectedRow()
     }
     
     
@@ -63,6 +63,9 @@ class CardsViewController: UIViewController, UITableViewDataSource {
     
         return cell
     }
+    
+    
+    
 }
 
 

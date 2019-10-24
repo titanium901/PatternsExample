@@ -102,7 +102,6 @@
 		CACC616B2357208F001B19D0 = {
 			isa = PBXGroup;
 			children = (
-				CA6E4EB223619C1900C9344D /* CardsList */,
 				CACC61762357208F001B19D0 /* PatternsExample */,
 				CACC61752357208F001B19D0 /* Products */,
 			);
@@ -119,6 +118,7 @@
 		CACC61762357208F001B19D0 /* PatternsExample */ = {
 			isa = PBXGroup;
 			children = (
+				CA6E4EB223619C1900C9344D /* CardsList */,
 				CA535ADD235DB7520005C577 /* CardDetails */,
 				CACC618F2357218D001B19D0 /* Models */,
 				CACC618B2357213D001B19D0 /* View */,

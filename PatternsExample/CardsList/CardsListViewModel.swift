@@ -11,6 +11,7 @@ import Foundation
 class CardsListViewModel: CardsListViewModelProtocol {
     
     var cards: [Card] = []
+    private var indexPath: IndexPath?
     
     func fetchCards(completion: @escaping () -> Void) {
         NetworkManager.shared.fetchData { cards in
@@ -28,5 +29,14 @@ class CardsListViewModel: CardsListViewModelProtocol {
         return CardsTableViewCellViewModel(card: card)
     }
     
+    func selectedRow(for indexPath: IndexPath) {
+        self.indexPath = indexPath
+    }
+    
+    func viewModelForSelectedRow() -> CardDetailsViewModelProtocol? {
+        guard let indexPath = indexPath else { return nil}
+        let card = cards[indexPath.row]
+        return CardDetailsViewModel(card: card)
+    }
     
 }
