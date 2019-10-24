@@ -23,7 +23,7 @@ class CardDetailsViewModel: CardDetailsViewModelProtocol {
     }
     
     var imageData: Data? {
-        return getImageData()
+        return ImageManager.shared.getImageData(from: card.image)
     }
     
     var isFavorite: Bool {
@@ -41,10 +41,4 @@ class CardDetailsViewModel: CardDetailsViewModelProtocol {
         self.card = card
     }
     
-    private func getImageData() -> Data? {
-        guard let stringURL = card.image else { return nil }
-        guard let imageURL = URL(string: stringURL) else { return nil }
-        guard let imageData = try? Data(contentsOf: imageURL) else { return nil }
-        return imageData
-    }
 }

@@ -8,35 +8,35 @@
 
 import UIKit
 
-class CardsViewController: UIViewController {
+class CardsViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet private var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private (set) var cards: [Card] = []
+    private var viewModel: CardsListViewModelProtocol! {
+        didSet {
+            viewModel.fetchCards {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.activityIndicator.stopAnimating()
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCards()
+        viewModel = CardsListViewModel()
         setupNavigationBar()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let card = cards[indexPath.row]
+        let card = viewModel.cards[indexPath.row]
         let detailVC = segue.destination as! CardDetailsViewController
         detailVC.card = card
     }
     
-    private func getCards() {
-        NetworkManager.shared.fetchData() { cards in
-            self.cards = cards
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.activityIndicator.stopAnimating()
-            }
-        }
-    }
     
     private func setupNavigationBar() {
         if #available(iOS 13.0, *) {
@@ -49,7 +49,23 @@ class CardsViewController: UIViewController {
             navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRows() ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell",
+                                                 for: indexPath) as! CardTableViewCell
+        
+        let cellViewModel = viewModel.cellViewModel(for: indexPath)
+        cell.viewModel = cellViewModel
+    
+        return cell
+    }
 }
+
+
 
 
 
